@@ -1,4 +1,4 @@
-# CLI
+# Command-line interface (CLI)
 
 ```
 let-interop --help
