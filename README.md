@@ -32,6 +32,8 @@ cargo test
 ./target/debug/let-interop roundtrip --dry-run --in fixtures/dxf/rect.dxf --expect fixtures/dxf/rect.json --report /tmp/report.json
 ```
 
+GitHub Actions was not added in the first push (the token lacks `workflow` scope). Add `.github/workflows/ci.yml` later: `cargo test`, `cargo build`, `--help`, and the DXF `check` command above.
+
 v0 `--dry-run` / `check` on DXF counts entities in-tree. STEP/IFC/IPC-2581 dry-run only checks that the input file looks like the format and that the expect JSON matches [`schema/report.schema.json`](schema/report.schema.json) required fields. Kernel round-trip is not implemented yet.
 
 ## CLI
