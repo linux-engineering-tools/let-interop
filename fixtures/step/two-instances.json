@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "fixture": "step-two-instances",
+  "format": "step-ap242",
+  "units": "millimetre",
+  "counts": {
+    "solids": 2,
+    "instances": 2
+  },
+  "tolerance": {
+    "length": 0.001,
+    "count": 0
+  }
+}

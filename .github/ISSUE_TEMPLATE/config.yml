@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: New capability (community)
+    url: https://github.com/linux-engineering-tools/community/issues/new/choose
+    about: Jobs, standards, and incubation still go to the community requirements board.
+  - name: Spec / RFC
+    url: https://github.com/linux-engineering-tools/community/blob/main/specs/let-interop/README.md
+    about: Public spec and RFC #21 live in community.

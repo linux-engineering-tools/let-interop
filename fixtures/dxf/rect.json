@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "fixture": "dxf-rect",
+  "format": "dxf",
+  "units": "millimetre",
+  "counts": {
+    "solids": 0,
+    "instances": 0,
+    "dxf_entities": 1
+  },
+  "bbox": {
+    "xmin": 0.0,
+    "ymin": 0.0,
+    "zmin": 0.0,
+    "xmax": 10.0,
+    "ymax": 20.0,
+    "zmax": 0.0
+  },
+  "tolerance": {
+    "length": 0.001,
+    "count": 0
+  }
+}

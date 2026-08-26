@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "fixture": "ipc2581-two-layer",
+  "format": "ipc-2581",
+  "units": "millimetre",
+  "counts": {
+    "solids": 0,
+    "instances": 0,
+    "pcb_layers": 2,
+    "pcb_nets": 1,
+    "pcb_drills": 0
+  },
+  "tolerance": {
+    "length": 0.001,
+    "count": 0
+  }
+}

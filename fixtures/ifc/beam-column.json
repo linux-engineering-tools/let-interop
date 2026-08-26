@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "fixture": "ifc-beam-column",
+  "format": "ifc",
+  "units": "millimetre",
+  "counts": {
+    "solids": 0,
+    "instances": 2,
+    "ifc_entities": 4
+  },
+  "tolerance": {
+    "length": 0.001,
+    "count": 0
+  }
+}

@@ -1,0 +1,29 @@
+name: Harness bug
+description: Something wrong in let-interop itself (CLI, schema, fixtures). Not a new CAD job.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        New capabilities belong in [community](https://github.com/linux-engineering-tools/community). This form is for the harness only. No proprietary material.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: Command, exit code, JSON report. No vendor CAD.
+    validations:
+      required: true
+  - type: textarea
+    id: expect
+    attributes:
+      label: What should happen
+    validations:
+      required: true
+  - type: checkboxes
+    id: clean-room
+    attributes:
+      label: Clean-room
+      options:
+        - label: I did not include proprietary source, binaries, leaked documents, or NDA material.
+          required: true
