@@ -1,6 +1,6 @@
 # Agent instructions — linux-engineering-tools/let-interop
 
-Read [community AGENTS.md](https://github.com/linux-engineering-tools/community/blob/main/AGENTS.md) first. This repo is the **harness**, not the requirements board.
+Read [community AGENTS.md](https://github.com/linux-engineering-tools/community/blob/main/AGENTS.md) first. This repo is the **harness**, not the requirements board. Spell out a term on first use, or link [community TERMS.md](https://github.com/linux-engineering-tools/community/blob/main/TERMS.md).
 
 ## What this repo is
 
