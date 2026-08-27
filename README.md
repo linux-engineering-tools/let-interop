@@ -1,8 +1,8 @@
 # let-interop
 
-Open-format **round-trip test harness**. Not computer-aided design (CAD). Not a translator clone.
+Open-format test harness (STEP/DXF/IPC-2581 round-trip; IFC parse + IfcDiff). Not computer-aided design (CAD). Not a translator clone.
 
-An engineer (or continuous integration (CI)) on Linux proves that a tool chain can import and export published geometry and electronics formats without silent data loss. **Round-trip** means: write the file out, read it back, and check counts, units, and bounds.
+An engineer (or continuous integration (CI)) on Linux proves that a tool chain can handle published geometry and electronics formats without silent data loss. For STEP, Drawing Exchange Format (DXF), and IPC-2581, **round-trip** means: write the file out, read it back, and check counts, units, and bounds. For Industry Foundation Classes (IFC), the harness **parses** with IfcOpenShell and **compares** two files with [IfcDiff](https://docs.ifcopenshell.org/ifcdiff.html). IfcOpenShell has no non-IFC native model, so this is not a kernel import/export. Geometry rewrite, if needed, is Bonsai.
 
 Organization terms: [community TERMS.md](https://github.com/linux-engineering-tools/community/blob/main/TERMS.md). Spell a term out on first use in a document, then use the short form.
 
@@ -36,7 +36,7 @@ cargo test
 
 GitHub Actions was not added in the first push (the token lacks `workflow` scope). Add `.github/workflows/ci.yml` later: `cargo test`, `cargo build`, `--help`, and the DXF `check` command above.
 
-v0 `--dry-run` / `check` on Drawing Exchange Format (DXF) counts entities in-tree. ISO 10303 STEP, Industry Foundation Classes (IFC), and IPC-2581 (printed circuit board manufacturing interchange) dry-run only checks that the input file looks like the format and that the expect JSON matches [`schema/report.schema.json`](schema/report.schema.json) required fields. Kernel round-trip is not implemented yet.
+v0 `--dry-run` / `check` on Drawing Exchange Format (DXF) counts entities in-tree. ISO 10303 STEP, Industry Foundation Classes (IFC), and IPC-2581 (printed circuit board manufacturing interchange) dry-run only checks that the input file looks like the format and that the expect JSON matches [`schema/report.schema.json`](schema/report.schema.json) required fields. Kernel round-trip and IfcDiff are not implemented yet.
 
 ## Command-line interface (CLI)
 

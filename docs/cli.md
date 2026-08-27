@@ -4,6 +4,7 @@
 let-interop --help
 let-interop check --in FILE --expect FILE [--report FILE]
 let-interop roundtrip --dry-run --in FILE --expect FILE [--report FILE]
+let-interop diff --old FILE --new FILE [--report FILE]
 ```
 
 `--help` / `-h` / no arguments: print this contract, exit 0.
@@ -16,12 +17,15 @@ let-interop roundtrip --dry-run --in FILE --expect FILE [--report FILE]
 
 **roundtrip** without `--dry-run` is not implemented in v0 (exit 4, JSON `error.code` = `host-not-implemented`).
 
+**diff** — Industry Foundation Classes (IFC) comparison via IfcDiff (`python -m ifcdiff`). Not implemented in v0 (same `host-not-implemented`). Do not use entity counts as the IFC pass/fail.
+
 ## Flags
 
 | Flag | Meaning |
 |---|---|
 | `--in` | Input: `.step`/`.stp`, `.ifc`, `.dxf`, or IPC-2581 `.xml` |
 | `--expect` | Expect JSON (required fields as in `schema/report.schema.json`) |
+| `--old` / `--new` | IFC files for `diff` (IfcDiff) |
 | `--report` | Write the JSON report here as well as stdout |
 
 ## Exit codes
@@ -30,7 +34,7 @@ let-interop roundtrip --dry-run --in FILE --expect FILE [--report FILE]
 |---|---|
 | 0 | Pass |
 | 2 | Input missing, unreadable, or schema-invalid |
-| 3 | Drift beyond tolerance (counts) |
+| 3 | Drift beyond tolerance (counts, bbox, or IfcDiff change register) |
 | 4 | Host/kernel subprocess failed or not implemented |
 | 64 | Usage (`--help` is 0) |
 
