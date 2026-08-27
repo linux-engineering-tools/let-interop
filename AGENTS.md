@@ -11,7 +11,7 @@ CLI + fixtures to round-trip published formats (STEP, IFC, DXF, IPC-2581) and re
 1. Capability language. No clone of a named commercial translator.
 2. No proprietary IP (source, binaries, leaked docs, vendor CAD as fixtures).
 3. Do not reimplement OCCT, IfcOpenShell, or KiCad here.
-4. No GUI in v0. If a GUI is proposed later, the Omarchy contract in community applies.
+4. No GUI in v0. If a GUI is proposed later, the community desktop contract applies (Wayland, user-editable keybinding file).
 5. DCO on every commit: `Signed-off-by: Full Name <email>`.
 6. Binary is `let-interop`, never `let`.
 7. New capabilities: file in [community](https://github.com/linux-engineering-tools/community). Issues here are harness bugs only.
